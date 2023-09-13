@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tsetpackage.LogInTestCase">
+      <class name="tsetpackage.DashBoardTest">
         <methods>
-          <include name="loginUsingInvalidCred"/>
+          <include name="LogIN"/>
+          <include name="validatingDropdown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- tsetpackage.LogInTestCase -->
+      </class> <!-- tsetpackage.DashBoardTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -30,8 +30,8 @@ public class LogOut extends BaseTest {
 		return OkBtn;
 	}
 	public void Logout() throws InterruptedException
-	{
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+	{  
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10000));
 	    wait.until(ExpectedConditions.elementToBeClickable(getLogOutBtn()));
 		LogOutBtn.click();
 		OkBtn.click();

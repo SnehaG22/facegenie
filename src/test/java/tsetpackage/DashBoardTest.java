@@ -1,19 +1,15 @@
 package tsetpackage;
 
 import java.io.IOException;
-import java.time.Duration;
 
 import org.apache.poi.EncryptedDocumentException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
-import pagepackage.LogOut;
+import pagepackage.DashBoardPage;
 
-public class LogOutTest extends BaseTest{
+public class DashBoardTest extends BaseTest{
 	@BeforeMethod
 	public void LogIN() throws EncryptedDocumentException, IOException, InterruptedException
 	{
@@ -22,11 +18,16 @@ public class LogOutTest extends BaseTest{
 		Thread.sleep(10000);
 	}
 	@Test
-	public void Logout() throws InterruptedException
+	public void validatingDropdown()
 	{
-		LogOut logout = new LogOut(driver);
-	     logout.Logout();
+		DashBoardPage DP = new DashBoardPage(driver);
+		DP.selectBus();
 	}
-	
+	@Test
+	public void validatingTodaysAttendanceFunc()
+	{
+		DashBoardPage DP = new DashBoardPage(driver);
+		DP.todaysAttendance();
+	}
 
 }
